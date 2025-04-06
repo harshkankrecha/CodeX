@@ -1,0 +1,2 @@
+web: gunicorn oj.wsgi:application --config gunicorn.conf.py
+worker: celery -A oj worker --loglevel=info

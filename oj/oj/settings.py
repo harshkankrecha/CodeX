@@ -150,6 +150,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -158,8 +159,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 #CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
-CELERY_BROKER_URL=env("CELERY_BROKER")
-CELERY_RESULT_BACKEND=env("CELERY_BACKEND")
+
+CELERY_BROKER_URL=os.environ.get("REDIS_URL", "redis://localhost:6379/0")
+CELERY_RESULT_BACKEND=CELERY_BROKER_URL
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'

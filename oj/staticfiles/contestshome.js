@@ -50,3 +50,41 @@ function consoleText(words, id, colors) {
         }
     }, 400)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current time
+    const currentTime = new Date();
+
+    // Get all contest boxes
+    const contests = document.querySelectorAll('.contest-box');
+
+    contests.forEach(function(contest) {
+        
+        // Extract the contest status element and the start and end times from data attributes
+        const contestId = contest.getAttribute('contest-id');
+        console.log(contestId);
+        const contestStatusElement = document.getElementById('contest-status' + contestId);
+
+        // Parse start and end times from data attributes
+        const contestStartTime = new Date(contest.getAttribute('data-start-time'));
+        const contestEndTime = new Date(contest.getAttribute('data-end-time'));
+
+        // Compare the current time with contest start and end times
+        if (contestStartTime > currentTime) {
+            
+            contestStatusElement.textContent = 'Upcoming';
+            contestStatusElement.style.color = '#17b794';
+            contestStatusElement.style.fontSize = "20px";  
+        } else if (contestEndTime < currentTime) {
+            
+            contestStatusElement.textContent = 'Ended';
+            contestStatusElement.style.color = '#17b794';
+            contestStatusElement.style.fontSize = "20px";
+        } else {
+            
+            contestStatusElement.textContent = 'Ongoing';
+            contestStatusElement.style.color = '#17b794';
+            contestStatusElement.style.fontSize = "20px"; 
+        }
+    });
+});

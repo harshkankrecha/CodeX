@@ -60,15 +60,11 @@ def home(request):
 
 @login_required
 def problems(request):    
-    cached_problems={}
-    if cache.get('cached_problems'):
-        cached_problems=cache.get('cached_problems')
-        print("From the problems cache")
-    else:
-        problems_list=Problem.objects.all()
-        for problem in problems_list:
-            cached_problems[problem.pk]=problem
-        cache.set('cached_problems',cached_problems,timeout=24*60)    
+    cached_problems={}    
+    problems_list=Problem.objects.all()
+    for problem in problems_list:
+        cached_problems[problem.pk]=problem
+    cache.set('cached_problems',cached_problems,timeout=24*60)    
     context={'problems_list':cached_problems.values(),'user_obj':request.user}
     return render(request,'problems_list.html',context)
 

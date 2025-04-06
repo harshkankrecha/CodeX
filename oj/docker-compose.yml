@@ -1,52 +1,32 @@
-version: '3.9'
+version: "3.9"
 
 services:
   web:
-    build: 
-      context: .
-      dockerfile: ./Dockerfile
-    container_name: django-celery-demo
-    command: /start
+    build: .
+    container_name: django_app
+    command: gunicorn oj.wsgi:application --config gunicorn.conf.py
     volumes:
-      - .:/app
-      - static_volume:/app/staticfiles
-    ports:
-      - 8000:8000
+      - static_volume:/code/staticfiles
     env_file:
       - .env
     depends_on:
       - redis
-
-  
-  nginx:
-    build: ./nginx
-    volumes:
-      - .:/app
-      - static_volume:/app/staticfiles
-    ports:
-      - 80:80
-    depends_on:
-      - web
-
 
   redis:
-    image: redis:6-alpine
+    image: redis:alpine
+    container_name: redis_server
 
-
-  celery_worker:
-    build: 
-      context: .
-      dockerfile: ./Dockerfile
-    command: /start-celeryworker
-    container_name: celery-worker
+  celery:
+    build: .
+    container_name: oj_celery_worker
+    command: ["sh", "celery-start.sh"]
     volumes:
-      - .:/app
+      - .:/code
     env_file:
       - .env
     depends_on:
       - redis
+      - web
+
 volumes:
   static_volume:
-
-
-  

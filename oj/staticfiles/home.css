@@ -14,34 +14,24 @@
   color: white;
 }
 
-#navItem1 {
-    color: #F8F2ED;
+
+  #navItem2 {
+    color: whitesmoke;
     font-family: 'Proxima Nova', sans-serif;
     font-size:22px;
-  }
-  #navItem2 {
-    color: #F8F2ED;
-    font-family: 'Proxima Nova', sans-serif;;
-    font-size:22px;
+    font-weight: 700;
   }
   #navItem3 {
-    color: #F8F2ED;
+    color: whitesmoke;
     font-family: 'Proxima Nova', sans-serif;
     font-size:22px;
+    font-weight: 700;
   }
   .logo {
     width: 60px;
     height: 55px;
   }
     
-    .heading{
-        color:rgb(54, 42, 27);
-        font-size: 36px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        text-shadow: blueviolet;
-        text-decoration: solid;
-    }
     
     .paragraph{
         
@@ -53,8 +43,7 @@
         text-decoration: solid;
         
     }
-    .card{
-      
+    .card{      
         background-size: cover;
         height: 100vh;
     }
@@ -64,14 +53,16 @@
     }
     .nav-card{          
       background-image: linear-gradient(to right,
-        #5D75FC,#5D75FC);
+      #01005e,#01005e);
+      box-shadow: 0 3px 5px #17b794;
     }
     .menu-item-image {
       border-radius: 16px;
       height:280px;
+      
     }
     .menu-card-title {
-      color: #323f4b;
+      color: whitesmoke;
       font-family: "Roboto";
       font-size: 22px;
       font-weight: 500;
@@ -79,6 +70,8 @@
     }
     .menu-item-card {
       border-radius: 16px;
+      background-color: #01005e;
+      box-shadow: 0 3px 5px #17b794;
     }
     .menu-item-link {
       color: #5D75FC;
@@ -117,3 +110,75 @@
         top: -0.14em;
         left: 10px;
     }
+    .heading-logo {
+      color: whitesmoke;
+      font-family: "Dancing Script", cursive;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size:45px;
+      margin-left:20px;
+      
+      
+    }
+
+
+
+    /* Container for the menu items */
+.menu-item-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 3px 4px #17b794;
+}
+
+/* Left image container */
+.menu-item-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  color:whitesmoke;
+}
+
+/* Right content container */
+.menu-item-content-container {
+  flex: 1.5;
+  color:whitesmoke;
+}
+
+/* Add padding and space between image and content */
+.menu-item-content-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.menu-item-content-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.menu-item-link {
+  color: #17b794;
+  
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu-item-link svg {
+  margin-left: 8px;
+}
+
+/* Reverse flex for the Practice section */
+.menu-item-card.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Ensure images and text align well */
+.menu-item-image {
+  max-height: 250px;
+  object-fit: cover;
+}

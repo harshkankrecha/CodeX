@@ -18,8 +18,8 @@ body {
 	flex-direction: column;
 	gap: 30px;
 	background-image: linear-gradient(to right,
-	#5182CC,
-	#0F9DBF);
+	#01005e,
+	#01005e);
 }
 
 header {
@@ -32,7 +32,14 @@ header {
 }
 
 .heading {
-	color: rgb(54, 42, 27);
+	color: whitesmoke;
+	font-family: "Dancing Script", cursive;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-size:45px;
+	
+	
 }
 
 .title {
@@ -44,7 +51,7 @@ header {
 	height: 600px;
 	width: 500px;
 	background-color: white;
-	box-shadow: 10px 10px 30px #5DCAFC;
+	box-shadow: 10px 10px 30px #17b794;
 	position: relative;
 	overflow: hidden;
 }
@@ -53,14 +60,22 @@ header {
 	height: 60px;
 	width: 300px;
 	margin: 20px auto;
-	box-shadow: 10px 10px 30px #5DCAFC;
+	box-shadow: 10px 10px 30px #17b794;
 	border-radius: 50px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
-.login,
+.login {
+	font-size: 22px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	position: relative;
+	cursor: pointer;
+	color:whitesmoke;
+}
 .signup {
 	font-size: 22px;
 	border: none;
@@ -68,6 +83,7 @@ header {
 	background-color: transparent;
 	position: relative;
 	cursor: pointer;
+	color:"#22267b";
 }
 
 .slider {
@@ -75,12 +91,12 @@ header {
 	width: 150px;
 	border-radius: 50px;
 	background-image: linear-gradient(to right,
-	#5D75FC,
-	#48CBFA);
+	#22267b,#22267b);
 	position: absolute;
 	top: 20px;
 	left: 100px;
 	transition: all 0.5s ease-in-out;
+	
 }
 
 .moveslider {
@@ -129,18 +145,20 @@ header {
 	border-radius: 50px;
 	padding-left: 30px;
 	font-size: 18px;
+	margin-top:30px;
 }
 
 .clkbtn {
 	height: 60px;
 	width: 150px;
+	color:whitesmoke;
 	border-radius: 50px;
 	background-image: linear-gradient(to right,
-	#5D75FC,
-	#48CBFA);
+	#22267b,#22267b);
 	font-size: 22px;
 	border: none;
 	cursor: pointer;
+	margin-top: 25px;
 }
 
 /* For Responsiveness of the page */
@@ -273,42 +291,47 @@ header {
 
 
 .google-btn {
-  width: 184px;
-  height: 42px;
-  background-color: #4285f4;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
-  .google-icon-wrapper {
-    position: absolute;
-    margin-top: 1px;
-    margin-left: 1px;
-    width: 40px;
-    height: 40px;
-    border-radius: 2px;
-    background-color: white;
-  }
-  .google-icon {
-    position: absolute;
-    margin-top: 11px;
-    margin-left: 11px;
-    width: 18px;
-    height: 18px;
-  }
-  .btn-text {
-    float: right;
-    margin: 11px 11px 0 0;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    font-family: "Roboto";
-	
-  }
-  &:hover {
-    box-shadow: 0 0 6px #4285f4;
-  }
-  &:active {
-    background: #1669F2;
-  }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    color: #333333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	margin-bottom:30px;
 }
 
+.google-btn img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+}
+
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+
+
+
+/* .first-color { 
+	background: #01005e; 
+}
+	
+.second-color { 
+	background: #22267b; 
+}
+
+.third-color { 
+	background: #28518a; 
+}
+
+.fourth-color { 
+	background: #17b794; 
+} */
