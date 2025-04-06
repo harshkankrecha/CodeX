@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Khula:700");
+
+.navbar-items{
+  box-shadow: inset 0 0 0 0 #48CBFA;
+  color: #48CBFA;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.navbar-items:hover {
+  box-shadow: inset 100px 0 0 0 #48CBFA;
+  color: white;
+}
+.heading-logo {
+  color: whitesmoke;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size:45px;
+  margin-left:20px;
+  
+  
+}
+.nav-card{          
+  background-image: linear-gradient(to right,
+  #01005e,#01005e);
+  box-shadow: 0 3px 5px #17b794;
+}
+  #navItem2 {
+    color: whitesmoke;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size:22px;
+    font-weight: 700;
+  }
+  #navItem3 {
+    color: whitesmoke;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size:22px;
+    font-weight: 700;
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+    
+  }
+  .text {
+    margin-right: 10px; /* Adds space between text and icon */
+  }
+  .tbl-content{
+    
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05); /* Bold and elegant shadow */
+  }
+  th{
+    
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 18px;
+    color: #01005e;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-family: Khula;
+    
+  }
+  td{
+    margin-top:20px;
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-family: Khula;
+    font-size: 18px;
+    
+    font-weight:600;
+
+    
+    
+  }
+  tr{
+    transition: transform 0.4s ease;
+  }
+  tr:hover{
+    background-color: #01005e;
+    color:whitesmoke;
+  }
+
+  /* demo styles */
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  body{
+    background: whitesmoke;
+    font-family: Khula;
+    
+  }
+  section{
+    margin: 50px;
+  } 
+  
+  
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  } 
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
