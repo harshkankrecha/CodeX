@@ -1,6 +1,6 @@
-# Coding Contest Platform
+# Coding Platform
 
-A full-stack **coding contest platform** built using **Python** and **Django**, enabling users to participate in **real-time programming competitions**.  
+A full-stack **coding platform** built using **Python** and **Django**, enabling users to participate in **real-time programming competitions**.  
 Features include **live leaderboards**, **Google Sign-In authentication**, and **asynchronous task processing** powered by **Celery** and **Redis**.  
 The system is fully **containerized with Docker**, production-ready with **Nginx + Gunicorn**.
 
