@@ -1,12 +1,15 @@
-Coding Contest Platform
+# Coding Contest Platform
 
-A full-stack coding contest platform built using Python and Django, enabling users to participate in real-time programming competitions. The platform features live leaderboards, Google Sign-In authentication, and asynchronous background task processing for smooth performance and scalability.
+A full-stack **coding contest platform** built using **Python** and **Django**, enabling users to participate in **real-time programming competitions**.  
+Features include **live leaderboards**, **Google Sign-In authentication**, and **asynchronous task processing** powered by **Celery** and **Redis**.  
+The system is fully **containerized with Docker**, production-ready with **Nginx + Gunicorn**.
 
-Features
 
-Real-time Coding Contests – Host contests with dynamic score updates and a live leaderboard.
-Google Sign-In Integration – Secure and convenient user authentication using OAuth2.
-Asynchronous Task Handling – Used Celery to schedule and execute background tasks such as result computation and notifications.
-Caching & Message Brokering – Leveraged Redis for caching leaderboard data and managing Celery task queues.
-Containerized Deployment – Fully containerized application with Docker for consistent environment setup.
-Production-Ready Setup – Configured Nginx as a reverse proxy and Gunicorn as the WSGI server for efficient request handling.
+## Features
+
+**Real-time Contests** – Dynamic leaderboard updates during ongoing contests.  
+**Google OAuth2 Login** – Quick and secure authentication using Google Sign-In.  
+**Celery for Background Tasks** – Handles scoring, scheduling, and notifications asynchronously.  
+**Redis Caching** – Speeds up leaderboard updates and queues Celery tasks.  
+**Containerized Deployment** – Simplified setup using Docker and Docker Compose.  
+**Production Ready** – Configured Nginx (reverse proxy) and Gunicorn (application server).  
